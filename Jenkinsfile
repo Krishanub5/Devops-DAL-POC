@@ -1,21 +1,21 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building 3.0..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing 3.0..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying 3.0....'
-            }
-        }
+  environment {
+    registry = "gustavoapolinario/docker-test"
+    registryCredential = ‘dockerhub’
+  }
+  agent any
+  stages {
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/bbm1234/Devops-DAL-POC.git'
+      }
     }
+    stage('Building image') {
+      steps{
+        script {
+          docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
+  }
 }
