@@ -5,7 +5,7 @@ pipeline {
   }
   agent any
   stages {
-    stage('Cloning Git') {
+    stage('Cloning Git Repo') {
       steps {
         sh "git clone git@github.com:bbm1234/Devops-DAL-POC.git"
       }
