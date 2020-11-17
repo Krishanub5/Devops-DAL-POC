@@ -1,5 +1,5 @@
 pipeline {
-agent { label 'Test'}
+agent none
     stages {
 	stage('Pull Image') {
       steps{
