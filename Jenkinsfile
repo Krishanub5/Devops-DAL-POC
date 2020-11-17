@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/bbm1234/Devops-DAL-POC.git'
+        git clone 'https://github.com/bbm1234/Devops-DAL-POC.git'
       }
     }
     stage('Building image') {
