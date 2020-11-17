@@ -13,6 +13,8 @@ agent any
          sh "docker stop \$(docker ps -qf name=dalhttp)"
          sh "docker rm \$(docker ps -a -qf name=dalhttp)"
         }
+		}
+		}
 	stage('Deploy Container') {
       steps{
         sh "docker run -d -p 9000:80 --name=dalhttp dalhttp"
