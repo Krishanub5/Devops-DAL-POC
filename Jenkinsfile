@@ -20,5 +20,10 @@ agent any
         sh "docker run -d -p 9000:80 --name=dalhttp dalhttp"
       }
 	}
+	stage('Check Application Availability') {
+      steps{
+        sh "./test.sh"
+      }
+	}
   }
 }
