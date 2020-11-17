@@ -10,7 +10,7 @@ pipeline {
         sh "git clone git@github.com:bbm1234/Devops-DAL-POC.git"
       }
     }
-    stage('Building image') {
+    stage('Building Image') {
       steps{
         script {
           docker.build registry + ":$BUILD_NUMBER"
