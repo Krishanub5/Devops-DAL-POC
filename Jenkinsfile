@@ -22,7 +22,7 @@ agent any
 	}
 	stage('Check Application Availability') {
       steps{
-        sh "./test.sh"
+        sh "./testing.sh"
       }
 	}
   }
