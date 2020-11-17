@@ -3,7 +3,7 @@ agent any
     stages {
 		stage('Building Image') {
       steps{
-        sh "docker build -t dalhttp:1 ."
+        sh "docker build -t dalhttp ."
       }
 	}
 	stage('Deploy Container') {
