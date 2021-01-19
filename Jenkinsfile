@@ -29,7 +29,7 @@ agent any
             }
             
         }
-        stage ('Check Application Availability') {
+        stage ('Check Application Availability api') {
             steps{
         	sh "bash testing.sh"
       		}	
