@@ -10,7 +10,6 @@ agent any
 	    
 	    stage ('API build stage') {
 			steps {
-				sh "cd api/"
 				sh "docker build express -t express:v1 -f express/Dockerfile"
 			}
 		}
