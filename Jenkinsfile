@@ -23,7 +23,7 @@ agent any
                 }
             }
         }
-        stage ('Deploy Container Dal') {
+        stage ('Deploy Container api') {
             steps{
                 sh "docker run -d -p 3010:3010 --name=express express:v1"
             }
